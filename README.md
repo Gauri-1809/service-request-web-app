@@ -147,6 +147,10 @@ This project is licensed under the MIT License.
 
 ---
 
-## 🙋‍♀️ Author
+## GitHub Link
+ https://github.com/Gauri-1809/service-request-web-app.git
 
-Built by [Your Name](https://github.com/your-username)
+-----
+## Hosted Link
+https://service-request-web-app.vercel.app/
+
