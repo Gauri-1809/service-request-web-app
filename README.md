@@ -1,70 +1,152 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🧩 Simplified Service Request Form
 
-## Available Scripts
+This is a responsive, multi-step service request form built with **React** and **Tailwind CSS**. It allows parents to submit requests outlining their child's learning support needs.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ✅ Multi-step form (3 steps)
+- ✅ Client-side validation with clear error messages
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ State management using React Hooks
+- ✅ Simulated submission with "Thank You" message
+- ✅ Styled with Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧱 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (with functional components and Hooks)
+- Tailwind CSS (utility-first responsive design)
+- JavaScript (ES6+)
+- No backend – submission is simulated via console + thank you message
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚖️ Folder Structure
+```bash
+.
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Step1_ChildDetails.jsx
+│   │   ├── Step2_ServiceNeeds.jsx
+│   │   ├── Step3_ContactInfo.jsx
+│   │   └── FormNavigation.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── index.css
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the repo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/your-username/simplified-service-form.git
+cd simplified-service-form
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### 3. Setup Tailwind CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install Tailwind and its dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
 
-### Code Splitting
+Update `tailwind.config.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```js
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
-### Analyzing the Bundle Size
+Update `postcss.config.js` if not created:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
 
-### Making a Progressive Web App
+In `src/index.css`, replace all content with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Run the application
 
-### Deployment
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app will run on: [http://localhost:3000](http://localhost:3000)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧪 Form Steps
+
+### Step 1: Child Details
+- Child's Age (number)
+- Diagnosis (text or dropdown)
+- Current School Type (radio)
+
+### Step 2: Service Needs
+- Type of Support (multi-select checkboxes)
+- Preferred Frequency (dropdown)
+- Specific Requirements (textarea)
+
+### Step 3: Contact Information
+- Parent's Name
+- Email Address
+- Phone Number
+
+### Final: Thank You
+- Displays confirmation and logs form data to console.
+
+---
+
+## 🎨 Screenshots
+
+_Add screenshots here for desktop, tablet, and mobile view (optional)_
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋‍♀️ Author
+
+Built by [Your Name](https://github.com/your-username)
