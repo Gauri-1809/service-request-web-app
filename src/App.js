@@ -43,7 +43,6 @@ const App = () => {
 
   const handleSubmit = () => {
     if (validateStep()) {
-      console.log('Submitted Data:', formData);
       setSubmitted(true);
     }
   };
